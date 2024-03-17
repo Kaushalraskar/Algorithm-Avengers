@@ -1,0 +1,76 @@
+#HTML :- 
+<!-- HTML -->
+<div id="quiz-container">
+  <div id="details">
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <label for="prn">PRN:</label>
+    <input type="text" id="prn">
+    <label for="college">Institute Name:</label>
+    <input type="text" id="college">
+    <button onclick="startTest()">Start Test</button>
+  </div>
+  <div id="questions" style="display: none;">
+    <h2 id="question"></h2>
+    <ul id="options"></ul>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+  <div id="result" style="display: none;">
+    <p id="score"></p>
+    <p id="message"></p>
+  </div>
+</div>
+
+#CSS
+body {
+  font-family: Arial, sans-serif;
+}
+
+#quiz-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#details label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#details input {
+  margin-bottom: 10px;
+}
+
+#questions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#questions li {
+  cursor: pointer;
+
+
+#JAVA script
+
+let currentQuestion = 0;
+let score = 0;
+
+const questions = [
+  {
+    question: "Which tab is not available on the left panel when you open a presentation?",
+    options: ["Outline", "Slides", "Notes", "All of the above are available"],
+    correctOption: 2
+  },
+  {
+    question: "Which of the following statements is not true?",
+    options: [
+      "You can type text directly into a PowerPoint slide but typing in a text box is more convenient.",
+      "From the Insert menu choose Picture and then File to insert your images into slides.",
+      "You can view a PowerPoint presentation in Normal, Slide Sorter, or Slide Show view.",
+      "You can show or hide the task pane from View >> Toolbars."
+    ],
+    correctOption: 0
+  },
+  {
+    question: "Therm is the unit of:",
+    options: ["Power", "Heat", "Light", "Distance"],
